@@ -5,8 +5,13 @@
       <span class="text-primary text-bold">(Express)</span>
     </h1>
   </div>
-  <div class="row">
-    <a [routerLink]="'/landing-page'" class="link">Go to: Landing Page</a>
+  <div class="d-flex gap-3">
+    <div>
+      <a [routerLink]="'/'" class="link">Home</a>
+    </div>
+    <div>
+      <a [routerLink]="'/landing-page'" class="link">Fetch Data</a>
+    </div>
   </div>
   <div class="row">
     <router-outlet></router-outlet>
