@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm run build && start cmd /k npm run prod && npm run watch",
+    "start": "node ./dist/angular-server-side-pro/server/server.mjs",
+    "start:local": "npm run build && start cmd /k npm run prod && npm run watch",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "prod": "node ./dist/angular-server-side-pro/server/server.mjs",
