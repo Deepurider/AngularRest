@@ -7,8 +7,7 @@
     "start:local": "npm run build && start cmd /k npm run prod && npm run watch",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "prod": "node ./dist/angular-server-side-pro/server/server.mjs",
-    "test": "ng test"
+    "prod": "node ./dist/angular-server-side-pro/server/server.mjs"
   },
   "private": true,
   "dependencies": {
