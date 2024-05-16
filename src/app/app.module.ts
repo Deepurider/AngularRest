@@ -10,6 +10,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, LandingPageComponent],
@@ -19,6 +20,7 @@ import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     NgbModule,
     NgbNavModule,
+    FormsModule
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

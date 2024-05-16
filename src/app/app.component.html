@@ -12,6 +12,16 @@
     <div>
       <a [routerLink]="'/landing-page'" class="link">Fetch Data</a>
     </div>
+    <div>
+      <input
+        type="text"
+        class="form-control"
+        (click)="sendMessage()"
+        placeholder="Send a message"
+        [(ngModel)]="message"
+      />
+      <button class="btn btn-small btn-primary ms-2">Send</button>
+    </div>
   </div>
   <div class="row">
     <router-outlet></router-outlet>

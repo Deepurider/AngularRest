@@ -27,7 +27,10 @@
     "dotenv": "^16.4.5",
     "env": "^0.0.2",
     "express": "^4.18.2",
+    "ngx-socket-io": "^4.6.1",
     "rxjs": "~7.8.0",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },
@@ -46,5 +49,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.2.2"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.8",
+    "utf-8-validate": "^5.0.10"
   }
 }

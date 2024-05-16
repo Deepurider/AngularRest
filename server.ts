@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import AppServerModule from './src/main.server';
 import { ApiRoutes } from './src/api/routes/index.route';
+import { webSocketConnections } from './web-socket';
+import http from 'http';
 require('dotenv').config();
 
 // The Express app is exported so that it can be used by serverless Functions.
@@ -52,7 +54,9 @@ function run(): void {
   const port = process.env['PORT'] || 4000;
 
   // Start up the Node server
-  const server = app();
+  const newApp = app();
+  const server: http.Server = http.createServer(newApp);
+  webSocketConnections(server);
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
